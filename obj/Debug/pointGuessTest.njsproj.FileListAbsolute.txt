@@ -1,0 +1,3 @@
+C:\Users\wills\Desktop\Shortcuts\Files\Github\pointGuessTest\pointGuessTest\obj\Debug\pointGuessTest.njsproj.AssemblyReference.cache
+C:\Users\wills\Desktop\Shortcuts\Files\Github\pointGuessTest\pointGuessTest\obj\Debug\pointGuessTest.njsproj.CoreCompileInputs.cache
+C:\Users\wills\Desktop\Shortcuts\Files\Github\pointGuessTest\pointGuessTest\bin\Microsoft.NodejsTools.WebRole.dll
