@@ -4,8 +4,8 @@ const coordinates = [
     [49.59929219923462, 68.2469102172686]
 ];
 
-// Select a random coordinate
-const randomCoordinate = coordinates[Math.floor(Math.random() * coordinates.length)];
+let randomCoordinate = coordinates[Math.floor(Math.random() * coordinates.length)];
+let line;
 
 const map = L.map('map').setView([0, 0], 2);
 
@@ -16,6 +16,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 map.on('click', function (e) {
     const userLat = e.latlng.lat;
     const userLng = e.latlng.lng;
+
+    if (line) {
+        map.removeLayer(line); // Remove existing line if any
+    }
+
+    line = L.polyline([randomCoordinate, [userLat, userLng]], { color: 'red' }).addTo(map); // Draw line
 
     const distance = calculateDistance(userLat, userLng, randomCoordinate[0], randomCoordinate[1]);
 
